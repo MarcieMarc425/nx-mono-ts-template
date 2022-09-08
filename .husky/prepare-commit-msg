@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+isVersioning="${VERSIONING:=false}"
+
+if [[ $isVersioning = false ]]; then
+  exec < /dev/tty && pnpm commit --hook || true
+fi
