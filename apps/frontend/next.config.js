@@ -35,7 +35,6 @@ const nextConfig = {
     nextWebVitalsMetricReport: NX_WEB_VITALS_METRIC_REPORT_ENABLED,
   },
   serverRuntimeConfig: {},
-  productionBrowserSourceMaps: NX_SOURCE_MAP_ENABLED === 'true',
 };
 
 module.exports = withPlugins([withNx, withBundleAnalyzer], nextConfig);

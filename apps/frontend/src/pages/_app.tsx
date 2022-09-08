@@ -1,4 +1,4 @@
-import { AppProps, NextWebVitalsMetric } from 'next/app';
+import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import Head from 'next/head';
 import { getPublicRuntimeConfigs } from '../utils';
 import './styles.css';
