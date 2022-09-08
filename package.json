@@ -6,7 +6,7 @@
     "name": "Marc Tse",
     "url": "https://github.com/MarcieMarc425"
   },
-  "description": "NX mono repo template",
+  "description": "A production-grade, opinionated NX monorepo template for enterprise. Bundled with frontend NextJS, backend NestJS, libraries, and more.",
   "scripts": {
     "git:cleanup": "git fetch -p && for branch in `git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == \"[gone]\" {sub(\"refs/heads/\", \"\", $1); print $1}'`; do git branch -D $branch; done",
     "start": "nx serve",
@@ -22,7 +22,8 @@
     "lint:affected": "nx affected:lint",
     "ci": "pnpm build:affected && pnpm lint:affected && pnpm test:affected",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "version": "changeset version"
   },
   "engines": {
     "node": ">=16"
@@ -59,6 +60,7 @@
     "zod": "^3.19.0"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.24.4",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@commitlint/config-nx-scopes": "^17.0.0",
